@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netflix-deployment
+  labels:
+    app: netflix-clone
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: netflix-clone
+  template:
+    metadata:
+      labels:
+        app: netflix-clone
+    spec:
+      containers:
+      - name: netflix-container
+        # Notice we are using the local image name we built in Phase 4
+        image: netflix-clone:latest
+        # This tells Kubernetes NOT to pull from Docker Hub, but to use the image already on the machine
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
