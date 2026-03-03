@@ -19,3 +19,7 @@ This repository contains the application code and deployment pipeline for a Reac
 * Integrate Docker Hub for remote image registry.
 * Add Trivy/SonarQube stages to the Jenkinsfile for automated DevSecOps scanning.
 * Migrate Kubernetes deployment from local Minikube to AWS EKS.
+
+##Architecture design  
+* Architecture of workflow understanding how everything works in sync 
+<img width="2816" height="1536" alt="microflix" src="https://github.com/user-attachments/assets/d107bcfa-5baf-4cb6-b8f5-ea988fbc334b" />
